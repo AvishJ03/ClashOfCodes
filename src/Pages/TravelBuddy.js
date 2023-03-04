@@ -1,12 +1,12 @@
-import React from 'react'
-import TravelCard from '../Components/TravelCard/TravelCard'
+import React from "react";
+import TravelCard from "../components/TravelCard/TravelCard";
 
 const TravelBudddy = () => {
   return (
     <div>
-        <TravelCard/>
+      <TravelCard />
     </div>
-  )
-}
+  );
+};
 
-export default TravelBudddy
+export default TravelBudddy;
