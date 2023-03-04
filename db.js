@@ -7,5 +7,5 @@ mongoose
     "mongodb+srv://MangoDB:MangoDB@cluster0.y5xsxxq.mongodb.net/?retryWrites=true&w=majority"
   )
   .then(() => {
-    console.log("Connected to Mongo");
+    console.log("Connected to Mongo!");
   });
