@@ -9,6 +9,8 @@ import 'package:flutter/material.dart';
 import 'package:coc_app/colors.dart' as color;
 
 import 'animated_drawer.dart';
+import 'home_page.dart';
+import 'itinerary.dart';
 import 'main_child.dart';
 
 class AnimatedDrawerPage extends StatefulWidget {
@@ -133,7 +135,8 @@ class _AnimatedDrawerPageState extends State<AnimatedDrawerPage> {
             ),
           ),
         ),
-        homePageContent: MainChild()
+        homePageContent: HomePage()
+        // MainChild()
         // Scaffold(
         //     backgroundColor: color.AppColor.homePageBackground,
         //     body: SafeArea(

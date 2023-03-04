@@ -1,3 +1,5 @@
+// ignore_for_file: unused_import, prefer_interpolation_to_compose_strings, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:coc_app/colors.dart' as color;
 import 'package:coc_app/widgets/app_large_text.dart';
@@ -6,6 +8,7 @@ import 'package:coc_app/widgets/responsive_button.dart';
 import 'package:get/get.dart';
 
 import 'home_page.dart';
+import 'itinerary.dart';
 import 'login_page.dart';
 
 class WelcomePage extends StatefulWidget {
@@ -25,6 +28,20 @@ class _WelcomePageState extends State<WelcomePage> {
   @override
   Widget build(BuildContext context) {
     return Scaffold(
+      appBar: AppBar(
+        elevation: 0,
+        backgroundColor: Colors.white,
+        actions: [
+          Padding(
+            padding: const EdgeInsets.only(right: 6.0, top: 18, bottom: 5),
+            child: Icon(
+              Icons.add_location_alt_outlined,
+              color: color.AppColor.mainColor,
+              size: 40,
+            ),
+          )
+        ],
+      ),
       body: PageView.builder(
           itemCount: images.length,
           scrollDirection: Axis.vertical,
@@ -39,7 +56,7 @@ class _WelcomePageState extends State<WelcomePage> {
               ),
               child: Container(
                 margin: const EdgeInsets.only(
-                  top: 150,
+                  top: 40,
                   right: 20,
                   left: 20,
                 ),

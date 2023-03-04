@@ -82,7 +82,7 @@ class _HomePageState extends State<HomePage> {
                       onChanged: (value) {},
                       icon: Padding(
                         padding: const EdgeInsets.only(left: 16.0),
-                        child: Image.asset('lib/images/drop_down_icon.png'),
+                        child: Image.asset('assets/drop_down_icon.png'),
                       ),
                       underline: SizedBox(),
                     ),
@@ -246,13 +246,13 @@ class _HomePageState extends State<HomePage> {
           children: <Widget>[
             IconButton(
               icon: Image.asset(
-                'lib/images/menu_icon.png',
+                'assets/menu_icon.png',
               ),
               onPressed: () {},
             ),
             IconButton(
               icon: Image.asset(
-                'lib/images/search_icon.png',
+                'assets/search_icon.png',
                 color: Colors.white,
               ),
               onPressed: () {
@@ -261,7 +261,7 @@ class _HomePageState extends State<HomePage> {
             ),
             IconButton(
               icon: Image.asset(
-                'lib/images/profile_icon.png',
+                'assets/profile_icon.png',
                 color: Colors.white,
               ),
               onPressed: () {
