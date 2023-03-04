@@ -26,14 +26,6 @@ const userSchema = new Schema({
     type: Number,
     default: 0,
   },
-  userlatitude: {
-    type: Number,
-    default: 19.107683,
-  },
-  userlongitude: {
-    type: Number,
-    default: 72.835752,
-  },
 });
 
 const users = mongoose.model("User", userSchema);

@@ -4,8 +4,13 @@ require("dotenv").config();
 const cors = require("cors");
 const app = express();
 
+const userRouter = require("./routes/user.route");
+const destinationRouter = require("./routes/destination.route");
+
 app.use(cors());
 app.use(express.json());
+app.use(userRouter);
+app.use(destinationRouter);
 
 const port = 5000;
 

@@ -6,13 +6,22 @@ const destinationSchema = new Schema({
     type: String,
     required: true,
   },
-  parent:{
-    type: mongoose.Schema.Types.ObjectId,
-    ref: "Destinations"
+  country: {
+    type: String,
+    required: true,
   },
-  
-  location: {
-    type: [Number],
+  files: {
+    types: [
+      {
+        userID: {
+          type: mongoose.Schema.Types.ObjectId,
+          ref: "User",
+        },
+        file: {
+          type: String,
+        },
+      },
+    ],
   },
 });
 

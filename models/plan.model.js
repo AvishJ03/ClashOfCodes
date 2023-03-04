@@ -5,15 +5,23 @@ const planSchema = new Schema({
   userID: {
     type: mongoose.Schema.Types.ObjectId,
     required: true,
-},
-from: {
-    type: [Number],
-    default: [19.107683, 72.835752],
-    required: true,
-},
-to: {
+    ref: "User",
+  },
+  destinationID: {
     type: mongoose.Schema.Types.ObjectId,
     required: true,
+    ref: "Destinations",
+  },
+  start: {
+    type: String,
+    required: true,
+  },
+  end: {
+    type: String,
+    required: true,
+  },
+  budget: {
+    type: Number,
   },
 });
 
