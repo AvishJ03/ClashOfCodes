@@ -20,12 +20,13 @@ function App() {
           {/* <Route path="/parallaxx" element={<Parallaxx />} /> */}
           <Route path="/trips" element={<Trips />} />
           <Route path="/posts" element={<AllPosts />} />
+          <Route path="/travelbuddy" element={<TravelBuddy/>} />
           {/* <Trips/> */}
     {/* <Parallaxx/> */}
     {/* <Login/> */}
     {/* <TripForm/> */}
     {/* <TripForm2/> */}
-    // <TravelBuddy/>
+   
         </Routes>
       </Router>
     </div>
