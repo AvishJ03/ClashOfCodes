@@ -37,9 +37,9 @@ const AllPosts = () => {
         <div className="py-5 my-8">
         <img src={sunset1} alt="sunset"/>
         <img src={sunset2} alt="sunset"/>
-        <img src={sunset3} alt="sunset"/>
+        {/* <img src={sunset3} alt="sunset"/>
         <img src={sunset4} alt="sunset"/>
-        <img src={sunset5} alt="sunset"/>
+        <img src={sunset5} alt="sunset"/> */}
         </div>
       </div>
     </div>
