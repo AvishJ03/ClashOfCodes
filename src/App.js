@@ -3,6 +3,7 @@ import Login from "./Pages/Login.js";
 import Parallaxx from "./Pages/Parallaxx.js";
 import AllPosts from "./Pages/AllPosts.js";
 import Trips from "./Pages/Trips";
+import Chat from "./Pages/Chat.js";
 
 function App() {
   // const [me, setMe] = useState(false);
@@ -17,10 +18,11 @@ function App() {
           {/* <Route path="/parallaxx" element={<Parallaxx />} /> */}
           <Route path="/trips" element={<Trips />} />
           <Route path="/posts" element={<AllPosts />} />
+          <Route path="/chat" element={<Chat />} />
         </Routes>
       </Router>
     </div>
-  )
+  );
 }
 
 export default App;

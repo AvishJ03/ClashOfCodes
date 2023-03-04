@@ -23,6 +23,7 @@ const Login = () => {
       const token = res.data.authToken;
       console.log(token);
       localStorage.setItem("token", token);
+      localStorage.setItem("chat-app-user", JSON.stringify(res.data.user));
       localStorage.setItem("userType", role);
       if (role === "user") {
         // navigate("/homeuser");
