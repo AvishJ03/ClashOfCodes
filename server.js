@@ -6,11 +6,13 @@ const app = express();
 
 const userRouter = require("./routes/user.route");
 const destinationRouter = require("./routes/destination.route");
+const postRouter = require("./routes/post.router");
 
 app.use(cors());
 app.use(express.json());
 app.use(userRouter);
 app.use(destinationRouter);
+app.use(postRouter);
 
 const port = 5000;
 
