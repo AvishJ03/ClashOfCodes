@@ -37,7 +37,4 @@ router.post("/getAllMessage", async (req, res, next) => {
   }
 });
 
-module.exports = {
-  addMessage,
-  getAllMessage,
-};
+module.exports = router;

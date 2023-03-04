@@ -9,6 +9,7 @@ const userRouter = require("./routes/user.route");
 const destinationRouter = require("./routes/destination.route");
 const postRouter = require("./routes/post.router");
 const planRouter = require("./routes/plans.route");
+const messageRouter = require("./routes/messages.route");
 
 app.use(cors());
 app.use(express.json());
@@ -16,6 +17,7 @@ app.use(userRouter);
 app.use(destinationRouter);
 app.use(postRouter);
 app.use(planRouter);
+app.use(messageRouter);
 
 const port = 5000;
 
