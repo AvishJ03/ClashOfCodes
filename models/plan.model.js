@@ -23,6 +23,10 @@ const planSchema = new Schema({
   budget: {
     type: Number,
   },
+  interests: {
+    type: [String],
+    required: true,
+  },
 });
 
 const plans = mongoose.model("Plans", planSchema);

@@ -10,19 +10,6 @@ const destinationSchema = new Schema({
     type: String,
     required: true,
   },
-  files: {
-    types: [
-      {
-        userID: {
-          type: mongoose.Schema.Types.ObjectId,
-          ref: "User",
-        },
-        file: {
-          type: String,
-        },
-      },
-    ],
-  },
 });
 
 const destinations = mongoose.model("Destinations", destinationSchema);
