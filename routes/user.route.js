@@ -50,7 +50,7 @@ router.post(
 );
 
 router.post(
-  "/login",
+  "/loginuser",
   [body("email").isEmail(), body("password")],
   async (req, res) => {
     let success = false;
