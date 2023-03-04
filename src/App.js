@@ -1,8 +1,12 @@
+import Login from "./Pages/Login.js";
+import Parallaxx from "./Pages/Parallaxx.js";
 import Trips from "./Pages/Trips";
 
 function App() {
   return <div className="App">
-    <Trips/>
+    {/* <Trips/> */}
+    {/* <Parallaxx/> */}
+    <Login/>
   </div>;
 }
 
