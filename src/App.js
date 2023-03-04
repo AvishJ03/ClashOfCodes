@@ -1,6 +1,7 @@
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 import Login from "./Pages/Login.js";
 import Parallaxx from "./Pages/Parallaxx.js";
+import AllPosts from "./Pages/AllPosts.js";
 import Trips from "./Pages/Trips";
 
 function App() {
@@ -15,6 +16,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           {/* <Route path="/parallaxx" element={<Parallaxx />} /> */}
           <Route path="/trips" element={<Trips />} />
+          <Route path="/posts" element={<AllPosts />} />
         </Routes>
       </Router>
     </div>
