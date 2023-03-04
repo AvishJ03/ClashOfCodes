@@ -7,7 +7,7 @@
 // import man from'../Assets/man.png'
 // import plants from'../Assets/plants.png'
 // import { Fade } from "react-reveal";
-// // import './Parallax.css'
+// import './Parallax.css'
 // import { useState, useEffect } from "react";
 // import {Parallax, ParallaxLayer} from '@react-spring/parallax'
 // const Parallaxx = () => {  
