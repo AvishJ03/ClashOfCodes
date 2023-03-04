@@ -11,7 +11,7 @@ function App() {
   // const [me, setMe] = useState(false);
   // useEffect(()=>{}, [me])
   return (
-    <div className="App font-ourfont flex">
+    <div className="App font-ourfont">
       <Router>
         {/* {(me || localStorage.getItem("token")) && <Sidebar setMe={setMe} />} */}
         <Routes>
