@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
 import axios from "axios";
-
+import '../index.css'
 import "swiper/css";
 import "swiper/css/effect-coverflow";
 import "swiper/css/pagination";
@@ -50,11 +50,11 @@ function Trips() {
   useEffect(() => { }, [places]);
 
   return (
-    <div className="html swiperrrr bg-[#efeded]">
-      <div className="container">
+    <div className="html swiperrrr bg-[#efeded] ">
+      <div className="container ">
         <div className="flex justify-between mb-8">
-          <h1 className="heading font-bold font-">Planned Trips</h1>
-          <div className="text-center text-4xl font-bold bg-[#F27D42] text-white pt-8 px-4 rounded-[1rem]">
+          <h1 className="heading font-bold">Planned Trips</h1>
+          <div className="text-center text-4xl font-bold bg-[#F27D42] text-white py-4 px-4 rounded-[1rem]">
             Plan a Trip
           </div>
         </div>
@@ -77,28 +77,28 @@ function Trips() {
             clickable: true,
           }}
           modules={[EffectCoverflow, Pagination, Navigation]}
-          className="swiper_container"
+          className="swiper_container "
         >
           <SwiperSlide>
-            <img className="opacity-75" src={mumbai} alt="slide_image" />
+            <img className="" src={banglore} alt="slide_image" />
           </SwiperSlide>
           <SwiperSlide>
 
-            <img className="opacity-75" src={banglore} alt="slide_image" />
+            <img className="" src={mumbai} alt="slide_image" />
           </SwiperSlide>
           <SwiperSlide>
 
-            <img className="opacity-75" src={singapore} alt="slide_image" />
+            <img className="" src={singapore} alt="slide_image" />
           </SwiperSlide>
           <SwiperSlide>
 
-            <img className="opacity-75" src={ladakh} alt="slide_image" />
+            <img className="" src={ladakh} alt="slide_image" />
           </SwiperSlide>
           <SwiperSlide>
 
-            <img className="opacity-75" src={paris} alt="slide_image" />
+            <img className="" src={paris} alt="slide_image" />
           </SwiperSlide>
-          <div className="slider-controler">
+          <div className="slider-controler -translate-y-36 z-20">
             <div className="swiper-button-prev slider-arrow">
               <ion-icon name="arrow-back-outline"></ion-icon>
             </div>

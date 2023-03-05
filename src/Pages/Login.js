@@ -140,7 +140,7 @@ const Login = () => {
       <img
         src={plane}
         alt="bottom"
-        className="absolute z-10 h-[715px] right-[340px] top-[-20px] -translate-y-36"
+        className="absolute z-10 h-56 right-[535px] top-[0px] "
       />
     </div>
   );

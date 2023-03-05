@@ -222,7 +222,7 @@ const TripForm2 = () => {
             adventurous?
           </div>
         </div>
-        <button onClick={submit}>Submit</button>
+        <button onClick={submit} className="bg-[#F27D42] rounded-lg p-4 w-48 text-white font-medium text-xl">Submit</button>
       </div>
     </div>
   );
