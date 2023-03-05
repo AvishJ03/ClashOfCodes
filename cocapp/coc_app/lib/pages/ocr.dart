@@ -2,6 +2,7 @@
 
 import 'dart:convert';
 import 'dart:io';
+import 'package:coc_app/apis/translation_api.dart';
 import 'package:coc_app/pages/expene.dart';
 
 import 'home_page.dart';
@@ -224,8 +225,11 @@ class _PrescriptionState extends State<Prescription> {
     final inputImage = InputImage.fromFilePath(image.path);
     final textDetector = GoogleMlKit.vision.textRecognizer();
     RecognizedText recognisedText = await textDetector.processImage(inputImage);
+    if (recognisedText == null) return;
+    String rec = recognisedText.toString();
+    final translatedText = await TranslationAPi.translateText(rec);
     await textDetector.close();
-    scannedText = "This is Dry Waste";
+    scannedText = translatedText!;
     textScanning = false;
     setState(() {});
   }
