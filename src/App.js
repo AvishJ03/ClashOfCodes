@@ -23,10 +23,11 @@ function App() {
           <Route path="/posts" element={<AllPosts />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/travelbuddy" element={<TravelBuddy/>} />
+          <Route path="/tripForm" element={<TripForm/>} />
           {/* <Trips/> */}
     {/* <Parallaxx/> */}
     {/* <Login/> */}
-    {/* <TripForm/> */}
+    
     {/* <TripForm2/> */}
    
         </Routes>
