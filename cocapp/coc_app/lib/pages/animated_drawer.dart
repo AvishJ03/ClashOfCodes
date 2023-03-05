@@ -72,7 +72,7 @@ class _AnimatedDrawerPageState extends State<AnimatedDrawerPage> {
                   padding: EdgeInsets.only(bottom: 60),
                 ),
                 Text(
-                  "Child Care :",
+                  "Other :",
                   style: TextStyle(
                     color: Colors.white,
                     fontSize: 28,
@@ -87,7 +87,7 @@ class _AnimatedDrawerPageState extends State<AnimatedDrawerPage> {
                     // Get.to(() => EducationalVideo());
                   },
                   child: Text(
-                    "Educational Videos",
+                    "  Emergency",
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),
@@ -99,7 +99,7 @@ class _AnimatedDrawerPageState extends State<AnimatedDrawerPage> {
                     // Get.to(() => DoctorSoldier());
                   },
                   child: Text(
-                    "Nearby Schools",
+                    "  Nearby Restaurants",
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),
@@ -111,7 +111,7 @@ class _AnimatedDrawerPageState extends State<AnimatedDrawerPage> {
                     // Get.to(() => HomePage());
                   },
                   child: Text(
-                    "HomePage",
+                    "  HomePage",
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),
