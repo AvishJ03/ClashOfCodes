@@ -6,11 +6,11 @@ const fetchUser = require("../middleware/fetchUser");
 
 router.post(
   "/postpost",
-//   fetchUser,
+  fetchUser,
   async (req, res) => {
     let success = false;
     try {
-      const { caption, likes, postedby} = req.body;
+      const { caption, likes, file} = req.body;
     //   const errors = validationResult(req);
     //   if (!errors.isEmpty()) {
     //     res.status(400).json({ errors: errors.array() });
@@ -19,8 +19,8 @@ router.post(
       const post = await posts.create({
         caption: caption,
         likes: likes,
-        // file,
-        postedby:postedby,
+        file,
+        postedby:req.user.id,
       });
       success = true;
       console.log(post);

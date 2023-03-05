@@ -1,18 +1,33 @@
 const express = require("express");
 const plans = require("../models/plan.model");
+const destinations = require("../models/destination.model");
 const router = express.Router();
 const fetchUser = require("../middleware/fetchUser");
 
 router.post("/addPlan", fetchUser, async (req, res) => {
   try {
+    const dest = await destinations.findOne({placename: req.body.placename})
     const plan = await plans.create({
       userID: req.user.id,
-      destinationID: req.body.destinationID,
+      destinationID: dest.id,
       start: req.body.start,
       end: req.body.end,
       budget: req.body.budget,
       interests: req.body.interests,
     });
+
+    res.json({ plan });
+  } catch (err) {
+    console.log(err);
+    res.json({ status: "error", error: err });
+  }
+});
+
+router.post("/addInterests", async (req, res) => {
+  try {
+    const plan = await plans.findOneAndUpdate({_id: req.body.id}, {
+      interests: req.body.interests
+    })
 
     res.json({ plan });
   } catch (err) {
