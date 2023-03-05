@@ -47,7 +47,7 @@ function Trips() {
     getPlaces();
   }, [trips]);
 
-  useEffect(() => {}, [places]);
+  useEffect(() => { }, [places]);
 
   return (
     <div className="html swiperrrr bg-[#efeded]">
@@ -80,34 +80,23 @@ function Trips() {
           className="swiper_container"
         >
           <SwiperSlide>
-            <div className="absolute z-20 top-72 left-96 font-bold ">
-              sfwihfsifdhik
-            </div>
             <img className="opacity-75" src={mumbai} alt="slide_image" />
           </SwiperSlide>
           <SwiperSlide>
-            <div className="absolute z-20 top-72 left-96 font-bold ">
-              sfwihfsifdhik
-            </div>
-            <img className="opacity-75" src={mumbai} alt="slide_image" />
+
+            <img className="opacity-75" src={banglore} alt="slide_image" />
           </SwiperSlide>
           <SwiperSlide>
-            <div className="absolute z-20 top-72 left-96 font-bold ">
-              sfwihfsifdhik
-            </div>
-            <img className="opacity-75" src={mumbai} alt="slide_image" />
+
+            <img className="opacity-75" src={singapore} alt="slide_image" />
           </SwiperSlide>
           <SwiperSlide>
-            <div className="absolute z-20 top-72 left-96 font-bold ">
-              sfwihfsifdhik
-            </div>
-            <img className="opacity-75" src={mumbai} alt="slide_image" />
+
+            <img className="opacity-75" src={ladakh} alt="slide_image" />
           </SwiperSlide>
           <SwiperSlide>
-            <div className="absolute z-20 top-72 left-96 font-bold ">
-              sfwihfsifdhik
-            </div>
-            <img className="opacity-75" src={mumbai} alt="slide_image" />
+
+            <img className="opacity-75" src={paris} alt="slide_image" />
           </SwiperSlide>
           <div className="slider-controler">
             <div className="swiper-button-prev slider-arrow">

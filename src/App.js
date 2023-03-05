@@ -7,6 +7,9 @@ import Chat from "./Pages/Chat.js";
 import TravelBuddy from "./Pages/TravelBuddy.js";
 import TripForm from "./Pages/TripForm.js";
 import TripForm2 from "./Pages/TripForm2.js";
+import Guides from "./Pages/Guides.js";
+import AddGuide from "./Pages/AddGuide.js";
+import Itenary from "./Pages/Itenary.js";
 import Profile from "./Pages/Profile.js";
 import Sidebar from "./Components/Sidebar/Sidebar.js";
 
@@ -26,18 +29,23 @@ function App() {
           <Route path="/posts" element={<AllPosts />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/travelbuddy" element={<TravelBuddy />} />
-          <Route path="/profile" element={<Profile />} />
-          {/* <Trips/> */}
-          {/* <Parallaxx/> */}
-          {/* <Login/> */}
-          {/* <TripForm/> */}
-          {/* <TripForm2/> */}
-          <Route path="/tripForm" element={<TripForm />} />
-          {/* <Trips/> */}
-          {/* <Parallaxx/> */}
-          {/* <Login/> */}
+          <Route path="/guides" element={<Guides />} />
+          <Route path="/addguides" element={<AddGuide />} />
+          <Route path="/tripform" element={<TripForm />} />
+          <Route path="/tripform2" element={<TripForm2 />} />
+          <Route path="/iternary" element={<Itenary />} />
 
-          {/* <TripForm2/> */}
+
+
+          {/* <Route path="/parallax" element={<Parallaxx/>} /> */}
+          {/* <Parallaxx/> */}
+
+
+
+
+
+          <Route path="/profile" element={<Profile />} />
+
         </Routes>
       </Router>
     </div>

@@ -12,13 +12,13 @@ const TravelCard = (props) => {
             Date: {props.start} to {props.end}
           </div>
           <div className="flex">
-            <div className="bg-[#022449] py-1 px-2 text-white rounded-lg m-2">
+            <div className="bg-[#022449] py-1 px-2 text-white rounded-lg ">
               Photography
             </div>
-            <div className="bg-[#022449] py-1 px-2 text-white rounded-lg m-2">
+            <div className="bg-[#022449] py-1 px-2 text-white rounded-lg">
               Blogger
             </div>
-            <div className="bg-[#022449] py-1 px-2 text-white rounded-lg m-2">
+            <div className="bg-[#022449] py-1 px-2 text-white rounded-lg ">
               Foodie
             </div>
           </div>

@@ -1,5 +1,4 @@
-import React from "react";
-import InterestCard from "../Components/InterestCard/InterestCard";
+import React, { useState } from "react";
 import "./../Components/InterestCard/InterestCard.css";
 import photographer from "../Assets/photographer1.png";
 import foodie from "../Assets/foodie.png";
@@ -7,20 +6,60 @@ import staycation from "../Assets/staycation.png";
 import bagpack from "../Assets/Bagpack.png";
 import blogger from "../Assets/blogger.png";
 import adventure from "../Assets/adventure.png";
+import axios from "axios";
 const TripForm2 = () => {
+  const [options, setOptions] = useState({
+    Photography: false,
+    Foodie: false,
+    Staycation: false,
+    Backpacking: false,
+    Blogger: false,
+    Adventure: false,
+  });
+
+  function handleChange(e) {
+    setOptions({ ...options, [e.target.name]: e.target.checked });
+  }
+
+  async function submit(e) {
+    e.preventDefault();
+    const interests = [];
+    const keys = Object.keys(options);
+    const values = Object.values(options);
+
+    values.forEach((element, idx) => {
+      if (element) {
+        interests.push(keys[idx]);
+      }
+    });
+
+    const res = await axios.post("http://localhost:5000/addInterests", {
+      interests: interests,
+      id: localStorage.getItem("planID"),
+    });
+    console.log(res.data);
+  }
+
   return (
     <div>
       <div className="text-6xl font-bold text-center py-8">
         Choose your Interests!
       </div>
-      <div className="grid grid-cols-3 justify-items-center">
-        <div className="card bg-[#C8EFF4]">
+      <div className="grid grid-cols-3 justify-items-center m-16">
+        <div className="card bg-[#C8EFF4] shadow-lg shadow-gray-200 ">
           <div className="card-image">
-            <img src={photographer} alt="" className="flex -translate-y-10 " />
+            <img src={photographer} alt="" className="flex " />
           </div>
           <div className="flex justify-start">
-            <div className="container">
-              <input type="checkbox" id="cbx21" style={{ display: "none" }} />
+            <div className="container py-4">
+              <input
+                type="checkbox"
+                name="Photography"
+                onChange={handleChange}
+                value={options.Photography}
+                id="cbx21"
+                style={{ display: "none" }}
+              />
               <label htmlFor="cbx21" className="check">
                 <svg width="18px" height="18px" viewBox="0 0 18 18">
                   <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
@@ -28,7 +67,7 @@ const TripForm2 = () => {
                 </svg>
               </label>
             </div>
-            <div className="heading">Photography</div>
+            <div className="heading ">Photography</div>
           </div>
           <div className="category">
             Do you enjoy capturing moments and memories through photography? Are
@@ -36,13 +75,20 @@ const TripForm2 = () => {
           </div>
         </div>
 
-        <div className="card  bg-[#C8EFF4]">
+        <div className="card  bg-[#C8EFF4] shadow-lg shadow-gray-200 ">
           <div className="card-image">
-            <img src={foodie} alt="" className="flex -translate-y-20" />
+            <img src={foodie} alt="" className="flex " />
           </div>
           <div className="flex justify-start">
-            <div className="container">
-              <input type="checkbox" id="cbx22" style={{ display: "none" }} />
+            <div className="container py-4">
+              <input
+                type="checkbox"
+                name="Foodie"
+                onChange={handleChange}
+                value={options.Foodie}
+                id="cbx22"
+                style={{ display: "none" }}
+              />
               <label htmlFor="cbx22" className="check">
                 <svg width="18px" height="18px" viewBox="0 0 18 18">
                   <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
@@ -58,13 +104,20 @@ const TripForm2 = () => {
             loves to explore a destination's culinary scene?
           </div>
         </div>
-        <div className="card  bg-[#C8EFF4]">
+        <div className="card  bg-[#C8EFF4] shadow-lg shadow-gray-200 ">
           <div className="card-image">
-            <img src={staycation} alt="" className="flex -translate-y-20" />
+            <img src={staycation} alt="" className="flex " />
           </div>
           <div className="flex justify-start">
-            <div className="container">
-              <input type="checkbox" id="cbx23" style={{ display: "none" }} />
+            <div className="container py-4">
+              <input
+                type="checkbox"
+                name="Staycation"
+                onChange={handleChange}
+                value={options.Staycation}
+                id="cbx23"
+                style={{ display: "none" }}
+              />
               <label htmlFor="cbx23" className="check">
                 <svg width="18px" height="18px" viewBox="0 0 18 18">
                   <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
@@ -81,13 +134,20 @@ const TripForm2 = () => {
             recharge and refresh?
           </div>
         </div>
-        <div className="card bg-[#C8EFF4]">
+        <div className="card bg-[#C8EFF4] shadow-lg shadow-gray-200 ">
           <div className="card-image">
-            <img src={bagpack} alt="" className="flex -translate-y-28 h-96" />
+            <img src={bagpack} alt="" className="flex " />
           </div>
           <div className="flex justify-start">
-            <div className="container">
-              <input type="checkbox" id="cbx24" style={{ display: "none" }} />
+            <div className="container py-4">
+              <input
+                type="checkbox"
+                name="Backpacking"
+                onChange={handleChange}
+                value={options.Backpacking}
+                id="cbx24"
+                style={{ display: "none" }}
+              />
               <label htmlFor="cbx24" className="check">
                 <svg width="18px" height="18px" viewBox="0 0 18 18">
                   <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
@@ -104,13 +164,20 @@ const TripForm2 = () => {
             that comes with backpacking?
           </div>
         </div>
-        <div className="card bg-[#C8EFF4]">
+        <div className="card bg-[#C8EFF4] shadow-lg shadow-gray-200 ">
           <div className="card-image">
-            <img src={blogger} alt="" className="flex -translate-y-28 h-96" />
+            <img src={blogger} alt="" className="flex" />
           </div>
           <div className="flex justify-start">
-            <div className="container">
-              <input type="checkbox" id="cbx25" style={{ display: "none" }} />
+            <div className="container py-4">
+              <input
+                type="checkbox"
+                name="Blogger"
+                onChange={handleChange}
+                id="cbx25"
+                value={options.Blogger}
+                style={{ display: "none" }}
+              />
               <label htmlFor="cbx25" className="check">
                 <svg width="18px" height="18px" viewBox="0 0 18 18">
                   <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
@@ -126,13 +193,20 @@ const TripForm2 = () => {
             your adventures with the world?
           </div>
         </div>
-        <div className="card">
+        <div className="card shadow-lg shadow-gray-200 ">
           <div className="card-image">
-            <img src={adventure} alt="" className="flex -translate-y-28 h-96" />
+            <img src={adventure} alt="" className="flex" />
           </div>
           <div className="flex justify-start">
-            <div className="container">
-              <input type="checkbox" id="cbx26" style={{ display: "none" }} />
+            <div className="container py-4">
+              <input
+                type="checkbox"
+                name="Adventure"
+                onChange={handleChange}
+                value={options.Adventure}
+                id="cbx26"
+                style={{ display: "none" }}
+              />
               <label htmlFor="cbx26" className="check">
                 <svg width="18px" height="18px" viewBox="0 0 18 18">
                   <path d="M 1 9 L 1 9 c 0 -5 3 -8 8 -8 L 9 1 C 14 1 17 5 17 9 L 17 9 c 0 4 -4 8 -8 8 L 9 17 C 5 17 1 14 1 9 L 1 9 Z"></path>
@@ -148,6 +222,7 @@ const TripForm2 = () => {
             adventurous?
           </div>
         </div>
+        <button onClick={submit}>Submit</button>
       </div>
     </div>
   );
