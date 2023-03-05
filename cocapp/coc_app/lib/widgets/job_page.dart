@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, prefer_const_literals_to_create_immutables, unnecessary_string_escapes
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:coc_app/colors.dart' as color;
@@ -25,7 +27,7 @@ class JobHomePage extends StatelessWidget {
                 child: Container(
                   alignment: Alignment.bottomLeft,
                   child: Image(
-                    image: AssetImage('lib/images/mourn.png'),
+                    image: AssetImage('assets/mourn.png'),
                   ),
                 ),
               ),

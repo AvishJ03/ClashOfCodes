@@ -1,4 +1,7 @@
+// ignore_for_file: prefer_typing_uninitialized_variables, prefer_const_constructors
+
 import 'package:flutter/material.dart';
+import 'package:coc_app/colors.dart' as color;
 
 class RecommendCard extends StatelessWidget {
   const RecommendCard({

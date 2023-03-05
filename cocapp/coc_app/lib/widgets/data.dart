@@ -19,7 +19,7 @@ class PlanetInfo {
 List<PlanetInfo> planets = [
   PlanetInfo(1,
       name: 'Itinerary',
-      text: 'Whole plan at your fingertips',
+      text: 'Complete plan at \nyour fingertips',
       iconImage: 'assets/__familycare.png',
       description:
           "Zipping around the sun in only 88 days, Mercury is the closest planet to the sun, and it's also the smallest, only a little bit larger than Earth's moon. Because its so close to the sun (about two-fifths the distance between Earth and the sun), Mercury experiences dramatic changes in its day and night temperatures: Day temperatures can reach a scorching 840  F (450 C), which is hot enough to melt lead. Meanwhile on the night side, temperatures drop to minus 290 F (minus 180 C).",
@@ -67,7 +67,7 @@ List<PlanetInfo> planets = [
       images: []),
   PlanetInfo(6,
       name: 'Track your trip',
-      text: 'Expense tracking, Dashboard, Weather',
+      text: 'Complete Track \n of your trip',
       iconImage: 'assets/__friends.png',
       description:
           "The sixth planet from the sun, Saturn is known most for its rings. When polymath Galileo Galilei first studied Saturn in the early 1600s, he thought it was an object with three parts: a planet and two large moons on either side. Not knowing he was seeing a planet with rings, the stumped astronomer entered a small drawing — a symbol with one large circle and two smaller ones — in his notebook, as a noun in a sentence describing his discovery. More than 40 years later, Christiaan Huygens proposed that they were rings. The rings are made of ice and rock and scientists are not yet sure how they formed. The gaseous planet is mostly hydrogen and helium and has numerous moons.",
