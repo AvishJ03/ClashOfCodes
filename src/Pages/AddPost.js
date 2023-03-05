@@ -1,5 +1,5 @@
 import axios from "axios";
-import React, {useState} from "react";
+import React, { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import FileBase from "react-file-base64";
 
@@ -13,25 +13,25 @@ const initialState = {
 
 const AddPost = () => {
   const [value, setValue] = useState({
-    file: ""
+    file: "",
   });
   const [formData, setFormData] = React.useState(initialState);
   const [showModal, setShowModal] = React.useState(false);
   const navigate = useNavigate();
-//   const change = (e) =>{
-//     setValue({...value, [e.target.name]: e.target.value})
-// }
+  //   const change = (e) =>{
+  //     setValue({...value, [e.target.name]: e.target.value})
+  // }
 
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-        console.log(value.file);
-        console.log(formData.caption);
+      console.log(value.file);
+      console.log(formData.caption);
       const res = await axios.post(
         "http://localhost:5000/postpost",
         {
           caption: formData.caption,
-        //   value: value.file
+          //   value: value.file
         },
         {
           headers: {
@@ -39,7 +39,7 @@ const AddPost = () => {
           },
         }
       );
-      alert('Photo posted succesfully')
+      alert("Photo posted succesfully");
     } catch (err) {
       console.log(err);
     }
