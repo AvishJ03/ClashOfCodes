@@ -37,17 +37,17 @@ class _MyWidgetState extends State<MyWidget> {
                     fontSize: 20,
                     fontWeight: FontWeight.bold))),
       ),
-      home: MyHomePage(),
+      home: MyExpenseHomePage(),
     );
   }
 }
 
-class MyHomePage extends StatefulWidget {
+class MyExpenseHomePage extends StatefulWidget {
   @override
-  _MyHomePageState createState() => _MyHomePageState();
+  _MyExpenseHomePageState createState() => _MyExpenseHomePageState();
 }
 
-class _MyHomePageState extends State<MyHomePage> {
+class _MyExpenseHomePageState extends State<MyExpenseHomePage> {
   final List<Transaction> _userTransactions = [
     // Transaction(
     //   id: 't1',
