@@ -1,9 +1,9 @@
 import axios from "axios";
 import React, { useEffect, useState, useRef } from "react";
 import { useNavigate } from "react-router-dom";
-import ChatContainer from "../components/ChatContainer";
-import Contacts from "../components/Contacts";
-import Welcome from "../components/Welcome";
+import ChatContainer from "../Components/ChatContainer";
+import Contacts from "../Components/Contacts";
+import Welcome from "../Components/Welcome";
 import { io } from "socket.io-client";
 import "./chat.css";
 

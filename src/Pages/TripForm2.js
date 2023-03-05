@@ -1,6 +1,6 @@
 import React from "react";
-import InterestCard from "../components/InterestCard/InterestCard";
-import "./../components/InterestCard/InterestCard.css";
+import InterestCard from "../Components/InterestCard/InterestCard";
+import "./../Components/InterestCard/InterestCard.css";
 import photographer from "../Assets/photographer1.png";
 import foodie from "../Assets/foodie.png";
 import staycation from "../Assets/staycation.png";
