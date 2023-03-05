@@ -41,39 +41,54 @@ const AllPosts = () => {
         </div>
         <div className="grid grid-cols-2">
           <div className="py-5 my-8">
+           <div className="text-xl text-slate-700 font-semibold mb-2"> By Susan Finn</div>
             <img
               src={sunset1}
               alt="sunset"
               className="rounded-lg shadow-primary-sd"
             />
+           <div className="text-xl text-slate-700 font-semibold mt-2"> "The Sun" </div>
+           <div className="text-xl text-slate-700 font-semibold mt-2"> Likes </div>
           </div>
           <div className="py-5 my-8">
+           <div className="text-xl text-slate-700 font-semibold mb-2"> By Susan Finn</div>
             <img
               src={sunset2}
               alt="sunset"
               className="rounded-lg shadow-primary-sd"
             />
+           <div className="text-xl text-slate-700 font-semibold mt-2"> "The Sun" </div>
+           <div className="text-xl text-slate-700 font-semibold mt-2"> Likes </div>
           </div>
           <div className="py-5 my-8">
+           <div className="text-xl text-slate-700 font-semibold mb-2"> By Susan Finn</div>
             <img
               src={sunset3}
               alt="sunset"
               className="rounded-lg shadow-primary-sd"
             />
+           <div className="text-xl text-slate-700 font-semibold mt-2"> "The Sun" </div>
+           <div className="text-xl text-slate-700 font-semibold mt-2"> Likes </div>
           </div>
           <div className="py-5 my-8">
+           <div className="text-xl text-slate-700 font-semibold mb-2"> By Susan Finn</div>
             <img
               src={sunset4}
               alt="sunset"
               className="rounded-lg shadow-primary-sd"
             />
+           <div className="text-xl text-slate-700 font-semibold mt-2"> "The Sun" </div>
+           <div className="text-xl text-slate-700 font-semibold mt-2"> Likes </div>
           </div>
           <div className="py-5 my-8">
+           <div className="text-xl text-slate-700 font-semibold mb-2"> By Susan Finn</div>
             <img
               src={sunset5}
               alt="sunset"
               className="rounded-lg shadow-primary-sd"
             />
+           <div className="text-xl text-slate-700 font-semibold mt-2"> "The Sun" </div>
+           <div className="text-xl text-slate-700 font-semibold mt-2"> Likes </div>
           </div>
         </div>
       </div>

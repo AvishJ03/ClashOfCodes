@@ -1,10 +1,37 @@
-import React from 'react'
-import {useNavigate} from "react-router-dom"
+import axios from 'axios';
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
+
 const TripForm = () => {
-    const navigate=useNavigate()
-    const handleClick=()=>{
-        navigate('/tripform2')
+
+    const navigate = useNavigate();
+
+    const [form, setForm] = useState({
+        "country": "",
+        "placename": "",
+        "no. of people": 1,
+        "start": "",
+        "end": "",
+        "budget": 0,
+        "interests": []
+    })
+
+    function handleChange(e){
+        setForm({...form, [e.target.name]: e.target.value})
     }
+
+    async function submit(e){
+        e.preventDefault();
+        const res = await axios.post("http://localhost:5000/addPlan", form, {
+            headers: {
+                "auth-token": localStorage.getItem("token")
+            }
+        })
+        console.log(res.data.plan._id);
+        localStorage.setItem("planID", res.data.plan._id)
+        navigate("/tripForm2")
+    }
+
     return (
         <div className='html text-xl'>
             <div className=''>
@@ -17,7 +44,9 @@ const TripForm = () => {
                                 className="appearance-none bg-transparent border-none w-full text-subtext focus:outline-none placeholder:text-base"
                                 type="text"
                                 placeholder="Destination Country"
-                                name="county"
+                                name="country"
+                                value={form.country}
+                                onChange={handleChange}
                             />
                         </div>
                     </div>
@@ -28,7 +57,9 @@ const TripForm = () => {
                                 className="appearance-none bg-transparent border-none w-full text-subtext focus:outline-none placeholder:text-base"
                                 type="text"
                                 placeholder="Destination City"
-                                name="city"
+                                name="placename"
+                                value={form.placename}
+                                onChange={handleChange}
                             />
                         </div>
                     </div>
@@ -51,9 +82,11 @@ const TripForm = () => {
                             <div className="flex items-center border-b-2 border-cyan-500 bg-white rounded-md p-1 my-2">
                                 <input
                                     className="appearance-none bg-transparent border-none w-full text-subtext focus:outline-none placeholder:text-base"
-                                    type="number"
                                     placeholder="Budget"
+                                    type="number"
                                     name="budget"
+                                    value={form.budget}
+                                    onChange={handleChange}
                                 />
                             </div>
                         </div>
@@ -66,7 +99,9 @@ const TripForm = () => {
                                         className="appearance-none bg-transparent border-none w-full text-subtext focus:outline-none placeholder:text-base"
                                         type="date"
                                         placeholder="Departure"
-                                        name="departure"
+                                        name="start"
+                                        value={form.start}
+                                        onChange={handleChange}
                                     />
                                 </div>
                             </div>
@@ -77,14 +112,16 @@ const TripForm = () => {
                                         className="appearance-none bg-transparent border-none w-full text-subtext focus:outline-none placeholder:text-base"
                                         type="date"
                                         placeholder="Arrival"
-                                        name="arrival"
+                                        name="end"
+                                        value={form.end}
+                                        onChange={handleChange}
                                     />
                                 </div>
                             </div>
                         </div>
                     </div>
                     <div className='flex justify-end space-x-2'>
-                        <div className='text-2xl font-semibold text-[#022449]' onClick={handleClick}>Select your Interests </div>
+                        <div className='text-2xl font-semibold text-[#022449]' onClick={submit}>Select your Interests </div>
                         <ion-icon name="arrow-forward-outline" ></ion-icon></div>
                 </form>
             </div>
