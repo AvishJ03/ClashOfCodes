@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import 'package:coc_app/colors.dart' as color;
 
@@ -24,15 +26,15 @@ class DetailPage extends StatelessWidget {
             child: Column(
               children: [
                 SizedBox(height: 60),
-                Image(image: AssetImage('lib/images/school1.jpeg'), height: 80),
+                Image(image: AssetImage('assets/school1.jpeg'), height: 80),
                 SizedBox(height: 30),
                 Text(
-                  'Teacher',
+                  'Sasoon Docks',
                   style: TextStyle(color: Colors.white, fontSize: 23),
                 ),
                 SizedBox(height: 5),
                 Text(
-                  'Army School',
+                  'Art Festival',
                   style: TextStyle(color: Colors.white54, fontSize: 18),
                 ),
                 SizedBox(height: 60),
@@ -43,7 +45,7 @@ class DetailPage extends StatelessWidget {
                       label: 'Full Time',
                     ),
                     WorkCategories(
-                      label: 'Teaching',
+                      label: 'Travel',
                     ),
                     WorkCategories(
                       label: 'Junior',
@@ -73,7 +75,7 @@ class DetailPage extends StatelessWidget {
           ),
           SizedBox(height: 25),
           Text(
-            '(1)  Master’s Degree in Design and Computer Science,\n       ',
+            '    (1) It’s the tourist central of the city with a liberal dose of\n          rich heritage    ',
             style: TextStyle(color: Colors.white70, fontSize: 14),
           ),
           SizedBox(height: 25),
@@ -83,7 +85,7 @@ class DetailPage extends StatelessWidget {
           ),
           SizedBox(height: 25),
           Text(
-            '(3)   Having Computer interactions, or a releated field',
+            '(3)     Having Computer interactions, or a releated field',
             style: TextStyle(color: Colors.white70, fontSize: 14),
           ),
           SizedBox(height: 25),
@@ -93,7 +95,7 @@ class DetailPage extends StatelessWidget {
           ),
           SizedBox(height: 25),
           Text(
-            '(5)   Have a Computer interaction, or a releated field',
+            '(5)      Have a Computer interaction, or a releated field',
             style: TextStyle(color: Colors.white70, fontSize: 14),
           ),
           SizedBox(height: 25),

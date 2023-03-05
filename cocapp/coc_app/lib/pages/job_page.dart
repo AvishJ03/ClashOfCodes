@@ -1,3 +1,5 @@
+// ignore_for_file: prefer_const_constructors, sized_box_for_whitespace, prefer_const_literals_to_create_immutables
+
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:coc_app/colors.dart' as color;
@@ -21,11 +23,11 @@ class JobHomePage extends StatelessWidget {
               Padding(
                 padding: EdgeInsets.symmetric(
                     horizontal: color.AppColor.defaultPadding,
-                    vertical: color.AppColor.defaultPadding * 2),
+                    vertical: color.AppColor.defaultPadding * 1.4),
                 child: Container(
                   alignment: Alignment.bottomLeft,
                   child: Image(
-                    image: AssetImage('lib/images/mourn.png'),
+                    image: AssetImage('assets/mourn.png'),
                   ),
                 ),
               ),
@@ -38,7 +40,7 @@ class JobHomePage extends StatelessWidget {
                     Container(
                       alignment: Alignment.bottomLeft,
                       child: Text(
-                        'Employment\nOppurtunities',
+                        'Places to Visit',
                         style: TextStyle(
                             fontSize: 30,
                             color: color.AppColor.bgColor,
@@ -81,7 +83,7 @@ class JobHomePage extends StatelessWidget {
                     child: Container(
                       alignment: Alignment.bottomLeft,
                       child: Text(
-                        'Available Openings :',
+                        'Guides :',
                         style: TextStyle(
                             color: color.AppColor.bgColor,
                             fontSize: 24,
@@ -149,8 +151,7 @@ class JobHomePage extends StatelessWidget {
                                   vertical: color.AppColor.defaultPadding - 8),
                               child: CircleAvatar(
                                 radius: 30,
-                                backgroundImage:
-                                    AssetImage('lib/images/school3.jpeg'),
+                                backgroundImage: AssetImage('assets/user3.png'),
                               ),
                             ),
                             Padding(
@@ -160,12 +161,12 @@ class JobHomePage extends StatelessWidget {
                               child: Text.rich(
                                 TextSpan(children: [
                                   TextSpan(
-                                    text: '   Product Tester\n     ',
+                                    text: 'Mr.Hargun Singh \n     ',
                                     style: TextStyle(
-                                        color: Colors.white, fontSize: 20),
+                                        color: Colors.white, fontSize: 23),
                                   ),
                                   TextSpan(
-                                      text: 'NimuSoft Labs',
+                                      text: 'NimuSoft agency',
                                       style: TextStyle(
                                           color: Colors.white54, fontSize: 14))
                                 ]),
@@ -183,7 +184,7 @@ class JobHomePage extends StatelessWidget {
                               label: 'Full Time',
                             ),
                             WorkCategories(
-                              label: 'Design',
+                              label: 'Travel',
                             ),
                             WorkCategories(
                               label: 'Junior',
@@ -202,7 +203,7 @@ class JobHomePage extends StatelessWidget {
                                   color: Colors.white60, fontSize: 16),
                             ),
                             Text(
-                              '\Rs.30,000/month',
+                              'Rating:4.5*',
                               style: TextStyle(
                                   color: Colors.white60, fontSize: 16),
                             ),
@@ -228,12 +229,12 @@ class JobHomePage extends StatelessWidget {
                           children: [
                             Padding(
                               padding: EdgeInsets.symmetric(
-                                  horizontal: color.AppColor.defaultPadding,
+                                  horizontal:
+                                      color.AppColor.defaultPadding + 12,
                                   vertical: color.AppColor.defaultPadding - 8),
                               child: CircleAvatar(
                                 radius: 30,
-                                backgroundImage:
-                                    AssetImage('lib/images/school1.jpeg'),
+                                backgroundImage: AssetImage('assets/user4.png'),
                               ),
                             ),
                             Padding(
@@ -243,12 +244,12 @@ class JobHomePage extends StatelessWidget {
                               child: Text.rich(
                                 TextSpan(children: [
                                   TextSpan(
-                                    text: '         Analyst\n     ',
+                                    text: '  Mr.Udayan Vats\n     ',
                                     style: TextStyle(
-                                        color: Colors.white, fontSize: 20),
+                                        color: Colors.white, fontSize: 23),
                                   ),
                                   TextSpan(
-                                      text: 'Sanghvi Laboratory',
+                                      text: '        SS Tours',
                                       style: TextStyle(
                                           color: Colors.white54, fontSize: 14))
                                 ]),
@@ -263,13 +264,13 @@ class JobHomePage extends StatelessWidget {
                           mainAxisAlignment: MainAxisAlignment.spaceEvenly,
                           children: [
                             WorkCategories(
-                              label: 'Full Time',
+                              label: 'Part Time',
                             ),
                             WorkCategories(
-                              label: 'Analyst',
+                              label: 'Travel',
                             ),
                             WorkCategories(
-                              label: 'Junior',
+                              label: 'Senior',
                             ),
                           ],
                         ),
@@ -285,7 +286,7 @@ class JobHomePage extends StatelessWidget {
                                   color: Colors.white60, fontSize: 16),
                             ),
                             Text(
-                              'Rs.40,000/month',
+                              'Rating: 4.2*',
                               style: TextStyle(
                                   color: Colors.white60, fontSize: 16),
                             ),
@@ -315,8 +316,7 @@ class JobHomePage extends StatelessWidget {
                                   vertical: color.AppColor.defaultPadding - 8),
                               child: CircleAvatar(
                                 radius: 30,
-                                backgroundImage:
-                                    AssetImage('lib/images/school4.jpeg'),
+                                backgroundImage: AssetImage('assets/user2.png'),
                               ),
                             ),
                             Padding(
@@ -326,12 +326,12 @@ class JobHomePage extends StatelessWidget {
                               child: Text.rich(
                                 TextSpan(children: [
                                   TextSpan(
-                                    text: '   Product Analyser\n     ',
+                                    text: '   Ms. Drishti Jain\n     ',
                                     style: TextStyle(
                                         color: Colors.white, fontSize: 20),
                                   ),
                                   TextSpan(
-                                      text: 'Synapse Laboratory',
+                                      text: 'IETE Tours',
                                       style: TextStyle(
                                           color: Colors.white54, fontSize: 14))
                                 ]),
@@ -349,7 +349,7 @@ class JobHomePage extends StatelessWidget {
                               label: 'Full Time',
                             ),
                             WorkCategories(
-                              label: 'Design',
+                              label: 'Travel',
                             ),
                             WorkCategories(
                               label: 'Junior',
@@ -368,7 +368,7 @@ class JobHomePage extends StatelessWidget {
                                   color: Colors.white60, fontSize: 16),
                             ),
                             Text(
-                              'Rs.16000/month',
+                              'Rating: 4.8*',
                               style: TextStyle(
                                   color: Colors.white60, fontSize: 16),
                             ),
@@ -388,7 +388,7 @@ class JobHomePage extends StatelessWidget {
                     child: Container(
                       alignment: Alignment.bottomLeft,
                       child: Text(
-                        'Applied Jobs',
+                        'Happening Events',
                         style: TextStyle(
                             color: color.AppColor.bgColor,
                             fontSize: 24,
@@ -423,17 +423,17 @@ class JobHomePage extends StatelessWidget {
                       );
                     },
                     child: RecommendCard(
-                      imgSrc: 'lib/images/school5.jpeg',
-                      company: 'Army School',
-                      jobName: 'Teacher',
-                      salary: 'Rs.30,000/month',
+                      imgSrc: 'assets/school5.jpeg',
+                      company: 'Sasoon Docks',
+                      jobName: 'Art Festival',
+                      salary: 'Rs.300/person',
                     ),
                   ),
                   RecommendCard(
-                    imgSrc: 'lib/images/school7.jpeg',
-                    company: 'Facebook',
-                    jobName: 'Engineer',
-                    salary: 'Rs.19000/month',
+                    imgSrc: 'assets/school7.jpeg',
+                    company: 'Trinityk',
+                    jobName: 'Culutural Fest',
+                    salary: 'Rs.190month',
                   ),
                 ],
               ),

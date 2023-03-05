@@ -1,5 +1,5 @@
 // ignore: unused_import
-// ignore_for_file: use_key_in_widget_constructors, unused_import, duplicate_ignore, prefer_const_constructors_in_immutables, prefer_const_constructors
+// ignore_for_file: use_key_in_widget_constructors, unused_import, duplicate_ignore, prefer_const_constructors_in_immutables, prefer_const_constructors, depend_on_referenced_packages
 
 import 'dart:ffi';
 import 'package:url_launcher/url_launcher.dart';

@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, must_be_immutable, unused_import
+// ignore_for_file: prefer_const_constructors, prefer_const_literals_to_create_immutables, use_key_in_widget_constructors, must_be_immutable, unused_import, depend_on_referenced_packages
 
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
@@ -37,7 +37,7 @@ class _AppointmentUserSkillsState extends State<AppointmentUserSkills> {
           title: Padding(
             padding: const EdgeInsets.symmetric(horizontal: 44.0),
             child: Text(
-              'Skill Teaching',
+              '   Add Events',
               style: TextStyle(fontSize: 24),
             ),
           ),
@@ -93,7 +93,7 @@ class _AppointmentUserSkillsState extends State<AppointmentUserSkills> {
                   height: 15,
                 ),
                 Text(
-                  'Educational Videos',
+                  'Short tagline',
                   style: TextStyle(
                     fontSize: 14,
                     fontFamily: 'Poppins',
