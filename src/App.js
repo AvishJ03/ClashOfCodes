@@ -12,6 +12,7 @@ import AddGuide from "./Pages/AddGuide.js";
 import Itenary from "./Pages/Itenary.js";
 import Profile from "./Pages/Profile.js";
 import Sidebar from "./Components/Sidebar/Sidebar.js";
+import Maps from "./Components/TravelCard/Maps.js";
 
 function App() {
   // const [me, setMe] = useState(false);
@@ -34,18 +35,12 @@ function App() {
           <Route path="/tripform" element={<TripForm />} />
           <Route path="/tripform2" element={<TripForm2 />} />
           <Route path="/iternary" element={<Itenary />} />
-
-
+          <Route path="/maps" element={<Maps />} />
 
           {/* <Route path="/parallax" element={<Parallaxx/>} /> */}
           {/* <Parallaxx/> */}
 
-
-
-
-
           <Route path="/profile" element={<Profile />} />
-
         </Routes>
       </Router>
     </div>
