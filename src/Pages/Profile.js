@@ -3,6 +3,7 @@ import BarChart from "../Components/BarChart";
 import { UserData } from "../Components/Data";
 import LineChart from "../Components/LineChart";
 import PieChart from "../Components/PieChart";
+import Weather from "../Components/Weather";
 
 const Profile = () => {
   const [userData, setUserData] = useState({
@@ -49,6 +50,9 @@ const Profile = () => {
           <div className="w-[35rem] h-[25rem]">
             <PieChart chartData={userData} />
           </div>
+        </div>
+        <div className="p-3 my-16">
+          <Weather />
         </div>
       </div>
     </div>

@@ -11,13 +11,15 @@ import Guides from "./Pages/Guides.js";
 import AddGuide from "./Pages/AddGuide.js";
 import Itenary from "./Pages/Itenary.js";
 import Profile from "./Pages/Profile.js";
+import Sidebar from "./Components/Sidebar/Sidebar.js";
 
 function App() {
   // const [me, setMe] = useState(false);
   // useEffect(()=>{}, [me])
   return (
-    <div className="App font-ourfont">
+    <div className="App font-ourfont flex">
       <Router>
+        <Sidebar />
         {/* {(me || localStorage.getItem("token")) && <Sidebar setMe={setMe} />} */}
         <Routes>
           {/* <Route path="/login" element={<Login setMe={setMe} />} /> */}
