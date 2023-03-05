@@ -30,6 +30,12 @@ function App() {
           {/* <Login/> */}
           {/* <TripForm/> */}
           {/* <TripForm2/> */}
+          <Route path="/tripForm" element={<TripForm />} />
+          {/* <Trips/> */}
+          {/* <Parallaxx/> */}
+          {/* <Login/> */}
+
+          {/* <TripForm2/> */}
         </Routes>
       </Router>
     </div>
