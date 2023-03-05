@@ -1,6 +1,37 @@
-import React from 'react'
+import axios from 'axios';
+import React, { useState } from 'react'
+import { useNavigate } from 'react-router-dom';
 
 const TripForm = () => {
+
+    const navigate = useNavigate();
+
+    const [form, setForm] = useState({
+        "country": "",
+        "placename": "",
+        "no. of people": 1,
+        "start": "",
+        "end": "",
+        "budget": 0,
+        "interests": []
+    })
+
+    function handleChange(e){
+        setForm({...form, [e.target.name]: e.target.value})
+    }
+
+    async function submit(e){
+        e.preventDefault();
+        const res = await axios.post("http://localhost:5000/addPlan", form, {
+            headers: {
+                "auth-token": localStorage.getItem("token")
+            }
+        })
+        console.log(res.data.plan._id);
+        localStorage.setItem("planID", res.data.plan._id)
+        navigate("/tripForm2")
+    }
+
     return (
         <div className=''>
             <div className=''>
@@ -13,7 +44,9 @@ const TripForm = () => {
                                 className="appearance-none bg-transparent border-none w-full text-subtext mr-3 py-1 leading-tight focus:outline-none"
                                 type="text"
                                 placeholder="Destination Country"
-                                name="county"
+                                name="country"
+                                value={form.country}
+                                onChange={handleChange}
                             />
                         </div>
                     </div>
@@ -24,7 +57,9 @@ const TripForm = () => {
                                 className="appearance-none bg-transparent border-none w-full text-subtext mr-3 py-1 leading-tight focus:outline-none"
                                 type="text"
                                 placeholder="Destination City"
-                                name="city"
+                                name="placename"
+                                value={form.placename}
+                                onChange={handleChange}
                             />
                         </div>
                     </div>
@@ -48,7 +83,9 @@ const TripForm = () => {
                                         className="appearance-none bg-transparent border-none w-full text-subtext mr-3 py-1 leading-tight focus:outline-none"
                                         type="date"
                                         placeholder="Departure"
-                                        name="departure"
+                                        name="start"
+                                        value={form.start}
+                                        onChange={handleChange}
                                     />
                                 </div>
                             </div>
@@ -59,7 +96,9 @@ const TripForm = () => {
                                         className="appearance-none bg-transparent border-none w-full text-subtext mr-3 py-1 leading-tight focus:outline-none"
                                         type="date"
                                         placeholder="Arrival"
-                                        name="arrival"
+                                        name="end"
+                                        value={form.end}
+                                        onChange={handleChange}
                                     />
                                 </div>
                             </div>
@@ -72,11 +111,13 @@ const TripForm = () => {
                                     type="number"
                                     placeholder="Budget"
                                     name="budget"
+                                    value={form.budget}
+                                    onChange={handleChange}
                                 />
                             </div>
                         </div>
                     </div>
-                    <div className='flex justify-end space-x-2'>
+                    <div className='flex justify-end space-x-2' onClick={submit}>
                     <div className='text-3xl font-semibold text-[#022449]'>Select your Interests </div>
                     <ion-icon name="arrow-forward-outline" ></ion-icon></div>
                 </form>

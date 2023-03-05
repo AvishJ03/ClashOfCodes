@@ -24,6 +24,7 @@ function App() {
           <Route path="/chat" element={<Chat />} />
           <Route path="/travelbuddy" element={<TravelBuddy/>} />
           <Route path="/tripForm" element={<TripForm/>} />
+          <Route path="/tripForm2" element={<TripForm2/>} />
           {/* <Trips/> */}
     {/* <Parallaxx/> */}
     {/* <Login/> */}
