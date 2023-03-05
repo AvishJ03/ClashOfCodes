@@ -28,14 +28,14 @@
   gap: 0.8rem;
 }
 
-.contacts .cont::-webkit-scrollbar {
+/* .contacts .cont::-webkit-scrollbar {
   width: 0.2rem;
 }
 .contacts .cont::-webkit-scrollbar-thumb {
   background-color: #ffffff39;
   width: 0.1rem;
   border-radius: 1rem;
-}
+} */
 
 .contacts .contact {
   background-color: #ffffff39;
