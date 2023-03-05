@@ -60,14 +60,14 @@ List<PlanetInfo> planets = [
       images: []),
   PlanetInfo(5,
       name: 'Nearby places',
-      text: 'Popular places to visit, panorama',
+      text: 'Places to visit',
       iconImage: 'assets/__home.png',
       description:
           "The fifth planet from the sun, Jupiter is a giant gas world that is the most massive planet in our solar system — more than twice as massive as all the other planets combined, according to NASA. Its swirling clouds are colorful due to different types of trace gases. And a major feature in its swirling clouds is the Great Red Spot, a giant storm more than 10,000 miles wide. It has raged at more than 400 mph for the last 150 years, at least. Jupiter has a strong magnetic field, and with 75 moons, it looks a bit like a miniature solar system.",
       images: []),
   PlanetInfo(6,
       name: 'Track your trip',
-      text: 'Complete Track \n of your trip',
+      text: 'Manage your trip',
       iconImage: 'assets/__friends.png',
       description:
           "The sixth planet from the sun, Saturn is known most for its rings. When polymath Galileo Galilei first studied Saturn in the early 1600s, he thought it was an object with three parts: a planet and two large moons on either side. Not knowing he was seeing a planet with rings, the stumped astronomer entered a small drawing — a symbol with one large circle and two smaller ones — in his notebook, as a noun in a sentence describing his discovery. More than 40 years later, Christiaan Huygens proposed that they were rings. The rings are made of ice and rock and scientists are not yet sure how they formed. The gaseous planet is mostly hydrogen and helium and has numerous moons.",

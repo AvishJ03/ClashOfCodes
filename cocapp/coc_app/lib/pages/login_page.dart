@@ -88,7 +88,7 @@ class _LoginPageState extends State<LoginPage> {
               //     child: Image.asset('lib/images/cloud.png')),
               Positioned(
                 left: 20,
-                top: 50,
+                top: 20,
                 child: Container(
                   height: 150,
                   width: 240,
@@ -109,7 +109,7 @@ class _LoginPageState extends State<LoginPage> {
                 ),
               ),
               Positioned(
-                top: 225,
+                top: 175,
                 left: 32,
                 child: Container(
                   height: 394,
@@ -312,25 +312,25 @@ class _LoginPageState extends State<LoginPage> {
               ),
               Container(
                 height: 150,
-                margin: EdgeInsets.only(top: 640, left: 10),
+                margin: EdgeInsets.only(top: 600, left: 00),
                 decoration: BoxDecoration(
                     image: DecorationImage(
                         image: AssetImage(
-                          'lib/images/login_logo.png',
+                          'assets/Login.png',
                         ),
-                        fit: BoxFit.cover)),
+                        fit: BoxFit.fill)),
               ),
               Positioned(
-                  right: 20,
-                  top: 50,
-                  left: 200,
+                  right: 10,
+                  top: 60,
+                  left: 150,
                   child: Container(
-                    height: 300,
-                    width: 380,
+                    height: 200,
+                    width: 300,
                     decoration: BoxDecoration(
                         image: DecorationImage(
                             image: AssetImage(
-                              'lib/images/plane.png',
+                              'assets/plane.png',
                             ),
                             fit: BoxFit.fitHeight)),
                   ))
