@@ -8,13 +8,15 @@ import TravelBuddy from "./Pages/TravelBuddy.js";
 import TripForm from "./Pages/TripForm.js";
 import TripForm2 from "./Pages/TripForm2.js";
 import Profile from "./Pages/Profile.js";
+import Sidebar from "./Components/Sidebar/Sidebar.js";
 
 function App() {
   // const [me, setMe] = useState(false);
   // useEffect(()=>{}, [me])
   return (
-    <div className="App font-ourfont">
+    <div className="App font-ourfont flex">
       <Router>
+        <Sidebar />
         {/* {(me || localStorage.getItem("token")) && <Sidebar setMe={setMe} />} */}
         <Routes>
           {/* <Route path="/login" element={<Login setMe={setMe} />} /> */}
