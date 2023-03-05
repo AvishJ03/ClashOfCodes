@@ -1,65 +1,113 @@
-import React from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
+import React, { useEffect, useState } from "react";
+import { Swiper, SwiperSlide } from "swiper/react";
+import axios from "axios";
 
-import 'swiper/css';
-import 'swiper/css/effect-coverflow';
-import 'swiper/css/pagination';
-import 'swiper/css/navigation';
+import "swiper/css";
+import "swiper/css/effect-coverflow";
+import "swiper/css/pagination";
+import "swiper/css/navigation";
 
-import { EffectCoverflow, Pagination, Navigation } from 'swiper';
+import { EffectCoverflow, Pagination, Navigation } from "swiper";
 
-import mumbai from './../Assets/Mumbai.webp';
-import banglore from './../Assets/banglore.jpg';
-import singapore from './../Assets/switz.jpg';
-import ladakh from './../Assets/ladakh.webp';
-import paris from './../Assets/paris.webp';
-
-
+import mumbai from "./../Assets/Mumbai.webp";
+import banglore from "./../Assets/banglore.jpg";
+import singapore from "./../Assets/switz.jpg";
+import ladakh from "./../Assets/ladakh.webp";
+import paris from "./../Assets/paris.webp";
 
 function Trips() {
+  const [trips, setTrips] = useState([]);
+  const [places, setPlaces] = useState([]);
+  const url1 = "http://localhost:5000/allPlans";
+  const url2 = "http://localhost:5000/getDestination";
+
+  useEffect(() => {
+    async function getTrips() {
+      const res = await axios.get(url1, {
+        headers: {
+          "auth-token": localStorage.getItem("token"),
+        },
+      });
+      setTrips(res.data.plan);
+    }
+    getTrips();
+  }, []);
+
+  useEffect(() => {
+    async function getPlaces() {
+      const arr = [];
+      trips.forEach(async (trip) => {
+        const res = await axios.get(url2 + `/${trip.destinationID}`);
+        trip["name"] = res.data.destination;
+        arr.push(trip);
+      });
+      console.log(arr);
+      setPlaces(arr);
+    }
+    getPlaces();
+  }, [trips]);
+
+  useEffect(() => {}, [places]);
+
   return (
-    <div className='html bg-[#efeded]'>
+    <div className="html swiperrrr bg-[#efeded]">
       <div className="container">
-        <div className='flex justify-between mb-8'>
+        <div className="flex justify-between mb-8">
           <h1 className="heading font-bold font-">Planned Trips</h1>
-          <div className='text-center text-4xl font-bold bg-[#F27D42] text-white pt-8 px-4
-  rounded-[1rem]'>Plan a Trip</div>
+          <div className="text-center text-4xl font-bold bg-[#F27D42] text-white pt-8 px-4 rounded-[1rem]">
+            Plan a Trip
+          </div>
         </div>
         <Swiper
-          effect={'coverflow'}
+          effect={"coverflow"}
           grabCursor={true}
           centeredSlides={true}
           loop={true}
-          slidesPerView={'auto'}
+          slidesPerView={"auto"}
           coverflowEffect={{
             rotate: 20,
             stretch: 0,
             depth: 100,
             modifier: 2.5,
           }}
-          pagination={{ el: '.swiper-pagination', clickable: true }}
+          pagination={{ el: ".swiper-pagination", clickable: true }}
           navigation={{
-            nextEl: '.swiper-button-next',
-            prevEl: '.swiper-button-prev',
+            nextEl: ".swiper-button-next",
+            prevEl: ".swiper-button-prev",
             clickable: true,
           }}
           modules={[EffectCoverflow, Pagination, Navigation]}
           className="swiper_container"
         >
           <SwiperSlide>
-            <img src={mumbai} alt="slide_image" />
+            <div className="absolute z-20 top-72 left-96 font-bold ">
+              sfwihfsifdhik
+            </div>
+            <img className="opacity-75" src={mumbai} alt="slide_image" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={banglore} alt="slide_image" />
+            <div className="absolute z-20 top-72 left-96 font-bold ">
+              sfwihfsifdhik
+            </div>
+            <img className="opacity-75" src={mumbai} alt="slide_image" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={singapore} alt="slide_image" />
+            <div className="absolute z-20 top-72 left-96 font-bold ">
+              sfwihfsifdhik
+            </div>
+            <img className="opacity-75" src={mumbai} alt="slide_image" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={ladakh} alt="slide_image" />
+            <div className="absolute z-20 top-72 left-96 font-bold ">
+              sfwihfsifdhik
+            </div>
+            <img className="opacity-75" src={mumbai} alt="slide_image" />
           </SwiperSlide>
           <SwiperSlide>
-            <img src={paris} alt="slide_image" />
+            <div className="absolute z-20 top-72 left-96 font-bold ">
+              sfwihfsifdhik
+            </div>
+            <img className="opacity-75" src={mumbai} alt="slide_image" />
           </SwiperSlide>
           <div className="slider-controler">
             <div className="swiper-button-prev slider-arrow">
@@ -68,10 +116,8 @@ function Trips() {
             <div className="swiper-button-next slider-arrow">
               <ion-icon name="arrow-forward-outline"></ion-icon>
             </div>
-
           </div>
         </Swiper>
-
       </div>
     </div>
   );
