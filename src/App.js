@@ -8,6 +8,8 @@ import TravelBuddy from "./Pages/TravelBuddy.js";
 import TripForm from "./Pages/TripForm.js";
 import TripForm2 from "./Pages/TripForm2.js";
 import Guides from "./Pages/Guides.js";
+import AddGuide from "./Pages/AddGuide.js";
+import Itenary from "./Pages/Itenary.js";
 
 function App() {
   // const [me, setMe] = useState(false);
@@ -25,11 +27,18 @@ function App() {
           <Route path="/chat" element={<Chat />} />
           <Route path="/travelbuddy" element={<TravelBuddy/>} />
           <Route path="/guides" element={<Guides/>} />
-          {/* <Trips/> */}
+          <Route path="/addguides" element={<AddGuide/>} />
+          <Route path="/tripform" element={<TripForm/>} />
+          <Route path="/tripform2" element={<TripForm2/>} />
+          <Route path="/iternary" element={<Itenary/>} />
+
+
+
+          {/* <Route path="/parallax" element={<Parallaxx/>} /> */}
     {/* <Parallaxx/> */}
-    {/* <Login/> */}
-    {/* <TripForm/> */}
-    {/* <TripForm2/> */}
+
+ 
+
    
         </Routes>
       </Router>

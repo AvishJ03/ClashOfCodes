@@ -8,10 +8,10 @@ const TravelCard = (props) => {
         <div className="text-4xl font-bold">{props.name}</div>
         <div className='text-2xl font-medium'>{props.location}</div>
         <div>Date: {props.start} to {props.end}</div>
-        <div className='flex'>
-            <div className='bg-[#022449] py-1 px-2 text-white rounded-lg m-2'>Photography</div>
-            <div className='bg-[#022449] py-1 px-2 text-white rounded-lg m-2'>Blogger</div>
-            <div className='bg-[#022449] py-1 px-2 text-white rounded-lg m-2'>Foodie</div>
+        <div className='flex space-x-2'>
+            <div className='bg-[#022449] py-1 px-2 text-white rounded-lg '>Photography</div>
+            <div className='bg-[#022449] py-1 px-2 text-white rounded-lg '>Blogger</div>
+            <div className='bg-[#022449] py-1 px-2 text-white rounded-lg '>Foodie</div>
             
         </div>
     </div>

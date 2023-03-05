@@ -1,6 +1,6 @@
 .card {
-    width: 40rem;
-    height: 40rem;
+    width: 25rem;
+    height: 30rem;
     background: white;
     padding: .4em;
     border-radius: 6px;
@@ -30,9 +30,11 @@
   }
   
   .heading {
-    font-weight: 400;
+    font-weight: 600;
     color: rgb(88, 87, 87);
     padding: 7px;
+    font-size: 1.25rem/* 20px */;
+    line-height: 1.75rem/* 28px */;
   }
   
   .heading:hover {
