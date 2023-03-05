@@ -7,6 +7,7 @@ import Chat from "./Pages/Chat.js";
 import TravelBuddy from "./Pages/TravelBuddy.js";
 import TripForm from "./Pages/TripForm.js";
 import TripForm2 from "./Pages/TripForm2.js";
+import Guides from "./Pages/Guides.js";
 
 function App() {
   // const [me, setMe] = useState(false);
@@ -23,6 +24,7 @@ function App() {
           <Route path="/posts" element={<AllPosts />} />
           <Route path="/chat" element={<Chat />} />
           <Route path="/travelbuddy" element={<TravelBuddy/>} />
+          <Route path="/guides" element={<Guides/>} />
           {/* <Trips/> */}
     {/* <Parallaxx/> */}
     {/* <Login/> */}

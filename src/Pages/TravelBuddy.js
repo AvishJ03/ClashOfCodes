@@ -1,5 +1,5 @@
 import React from 'react'
-import TravelCard from '../Components/TravelCard/TravelCard'
+import TravelCard from '../components/TravelCard/TravelCard'
 import user1 from '../Assets/user1.png'
 import user2 from '../Assets/user2.png'
 import user3 from '../Assets/user3.png'
