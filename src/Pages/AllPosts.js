@@ -39,20 +39,42 @@ const AllPosts = () => {
           </div>
           <AddPost />
         </div>
-        <div className="py-5 my-8">
-          <img src={sunset1} alt="sunset" className="rounded-lg shadow-primary-sd"/>
-        </div>
-        <div className="py-5 my-8">
-          <img src={sunset2} alt="sunset"  className="rounded-lg shadow-primary-sd"/>
-        </div>
-        <div className="py-5 my-8">
-          <img src={sunset3} alt="sunset"  className="rounded-lg shadow-primary-sd"/>
-        </div>
-        <div className="py-5 my-8">
-          <img src={sunset4} alt="sunset"  className="rounded-lg shadow-primary-sd"/>
-        </div>
-        <div className="py-5 my-8">
-          <img src={sunset5} alt="sunset"  className="rounded-lg shadow-primary-sd"/>
+        <div className="grid grid-cols-2">
+          <div className="py-5 my-8">
+            <img
+              src={sunset1}
+              alt="sunset"
+              className="rounded-lg shadow-primary-sd"
+            />
+          </div>
+          <div className="py-5 my-8">
+            <img
+              src={sunset2}
+              alt="sunset"
+              className="rounded-lg shadow-primary-sd"
+            />
+          </div>
+          <div className="py-5 my-8">
+            <img
+              src={sunset3}
+              alt="sunset"
+              className="rounded-lg shadow-primary-sd"
+            />
+          </div>
+          <div className="py-5 my-8">
+            <img
+              src={sunset4}
+              alt="sunset"
+              className="rounded-lg shadow-primary-sd"
+            />
+          </div>
+          <div className="py-5 my-8">
+            <img
+              src={sunset5}
+              alt="sunset"
+              className="rounded-lg shadow-primary-sd"
+            />
+          </div>
         </div>
       </div>
     </div>
