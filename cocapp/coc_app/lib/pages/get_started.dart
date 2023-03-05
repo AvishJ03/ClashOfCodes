@@ -28,9 +28,9 @@ class _GetStartedState extends State<GetStarted> {
                   height: 150,
                   width: 230,
                   child: Text(
-                    'We care for you...',
+                    'Travel like a local...',
                     style: TextStyle(
-                        fontSize: 48,
+                        fontSize: 42,
                         color: Color(0xFF424242),
                         fontFamily: 'Poppins',
                         fontWeight: FontWeight.w800,
@@ -60,7 +60,7 @@ class _GetStartedState extends State<GetStarted> {
                           // color: Colors.cyan,
                           image: DecorationImage(
                               image: AssetImage(
-                                'assets/Soldier.jpg',
+                                'assets/getstarted.jpeg',
                               ),
                               fit: BoxFit.cover))),
                 ),
