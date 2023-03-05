@@ -1,4 +1,5 @@
 const express = require("express");
+const users = require("../models/user.model");
 const plans = require("../models/plan.model");
 const destinations = require("../models/destination.model");
 const router = express.Router();
@@ -46,10 +47,9 @@ router.get("/allPlans", fetchUser, async (req, res) => {
   }
 });
 
-router.get("/recommendSimilar", fetchUser, async (req, res) => {
+router.post("/recommendSimilar", fetchUser, async (req, res) => {
   try {
     const plan = await plans.findOne({ _id: req.body.planID });
-    const users = [];
     const recommended = await plans.find({
       destinationID: plan.destinationID,
       userID: { $ne: plan.userID },
@@ -66,7 +66,16 @@ router.get("/recommendSimilar", fetchUser, async (req, res) => {
       ],
       interests: { $in: plan.interests },
     });
-    res.json({ recommended });
+
+    const ids = [];
+    recommended.forEach((detail) => {
+      ids.push(detail.userID);
+    });
+
+    const details = await users.find({
+      _id: { $in: ids },
+    });
+    res.json({ recommended, details });
   } catch (err) {
     console.log(err);
     res.json({ status: "error", error: err });

@@ -73,7 +73,7 @@ router.post(
           };
           const authToken = jwt.sign(data, "hetvi");
           success = true;
-          res.json({ success, authToken });
+          res.json({ success, user, authToken });
         }
       }
     } catch (err) {

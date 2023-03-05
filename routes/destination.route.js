@@ -29,4 +29,14 @@ router.get("/allCities", async (req, res) => {
   }
 });
 
+router.get("/getDestination/:id", async (req, res) => {
+  try {
+    const destination = await destinations.findOne({ _id: req.params.id });
+    res.json({ destination });
+  } catch (err) {
+    console.log(err);
+    res.json({ status: "error", error: err });
+  }
+});
+
 module.exports = router;
