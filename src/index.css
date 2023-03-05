@@ -18,59 +18,41 @@
   --bg: #f5f5f5;
 }
 
-html {
+.html {
   font-size: 62.5%;
   scroll-behavior: smooth;
 }
 
-@media (min-width: 1440px) {
-  html {
-    zoom: 1.5;
-  }
-}
-
-@media (min-width: 2560px) {
-  html {
-    zoom: 1.7;
-  }
-}
-
-@media (min-width: 3860px) {
-  html {
-    zoom: 2.5;
-  }
-}
-
-::-webkit-scrollbar {
+.swiperrrr ::-webkit-scrollbar {
   width: 1.3rem;
 }
 
-::-webkit-scrollbar-thumb {
+.swiperrrr ::-webkit-scrollbar-thumb {
   border-radius: 1rem;
   background: #797979;
   transition: all 0.5s ease-in-out;
 }
 
-::-webkit-scrollbar-thumb:hover {
+.swiperrrr ::-webkit-scrollbar-thumb:hover {
   background: #222224;
 }
 
-::-webkit-scrollbar-track {
+.swiperrrr ::-webkit-scrollbar-track {
   background: #f9f9f9;
 }
 
-body {
+.html {
   font-size: 1.6rem;
   background: var(--bg);
 }
 
-.container {
+.swiperrrr .container {
   max-width: 124rem;
   padding: 4rem 1rem;
   margin: 0 auto;
 }
 
-.heading {
+.swiperrrr .heading {
   padding: 1rem 0;
   font-size: 3.5rem;
   text-align: center;
@@ -86,20 +68,6 @@ body {
   width: 37rem;
   height: 42rem;
   position: relative;
-}
-
-@media (max-width: 500px) {
-  .swiper_container {
-    height: 47rem;
-  }
-  .swiper-slide {
-    width: 28rem !important;
-    height: 36rem !important;
-  }
-  .swiper-slide img {
-    width: 28rem !important;
-    height: 36rem !important;
-  }
 }
 
 .swiper-slide img {
@@ -125,35 +93,6 @@ body {
 .slider-controler .swiper-button-next {
   left: 58% !important;
   transform: translateX(-58%) !important;
-  
-}
-
-@media (max-width: 990px) {
-  .slider-controler .swiper-button-next {
-    left: 70% !important;
-    transform: translateX(-70%) !important;
-  }
-}
-
-@media (max-width: 450px) {
-  .slider-controler .swiper-button-next {
-    left: 80% !important;
-    transform: translateX(-80%) !important;
-  }
-}
-
-@media (max-width: 990px) {
-  .slider-controler .swiper-button-prev {
-    left: 30% !important;
-    transform: translateX(-30%) !important;
-  }
-}
-
-@media (max-width: 450px) {
-  .slider-controler .swiper-button-prev {
-    left: 20% !important;
-    transform: translateX(-20%) !important;
-  }
 }
 
 .slider-controler .slider-arrow {
@@ -172,7 +111,7 @@ body {
 }
 
 .slider-controler .slider-arrow::after {
-  content: '';
+  content: "";
 }
 
 .swiper-pagination {
