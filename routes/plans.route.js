@@ -47,6 +47,16 @@ router.get("/allPlans", fetchUser, async (req, res) => {
   }
 });
 
+router.get("/allPlansM", fetchUser, async (req, res) => {
+  try {
+    const plan = await plans.findOne({ userID: req.user.id, destinationID: "640349b1ab5018e59ce04888" });
+    res.json({ plan });
+  } catch (err) {
+    console.log(err);
+    res.json({ status: "error", error: err });
+  }
+});
+
 router.post("/recommendSimilar", fetchUser, async (req, res) => {
   try {
     const plan = await plans.findOne({ _id: req.body.planID });
