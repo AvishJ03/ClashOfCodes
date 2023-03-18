@@ -69,6 +69,7 @@ dependencies:
   fl_chart: ^0.61.0
   sliver_bar_chart: ^0.0.1
   google_ml_kit: ^0.13.0
+  google_maps_flutter: ^2.2.5
   
 
 

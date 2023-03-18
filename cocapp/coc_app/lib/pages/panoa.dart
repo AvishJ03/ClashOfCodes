@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_import, implementation_imports, unused_import, use_key_in_widget_constructors, prefer_const_constructors_in_immutables, library_private_types_in_public_api, prefer_const_constructors, sort_child_properties_last, avoid_print, deprecated_member_use
+
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
 
@@ -35,7 +37,7 @@ class _MyHomePanoaState extends State<MyHomePanoa> {
   int _panoId = 0;
   List<Image> panoImages = [
     Image.asset('assets/panorama.jpg'),
-    Image.asset('assets/download1.jpeg'),
+    Image.asset('assets/panorama2.webp'),
     Image.asset('assets/panorama_cropped.webp'),
   ];
   ImagePicker picker = ImagePicker();

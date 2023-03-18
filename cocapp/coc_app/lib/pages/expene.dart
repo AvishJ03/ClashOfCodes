@@ -1,6 +1,7 @@
-// ignore_for_file: sized_box_for_whitespace, prefer_const_constructors
+// ignore_for_file: sized_box_for_whitespace, prefer_const_constructors, unused_import, deprecated_member_use, use_key_in_widget_constructors, library_private_types_in_public_api, sort_child_properties_last
 
 import 'package:flutter/material.dart';
+import 'package:get/get.dart';
 
 import '../models/transaction.dart';
 import '../widgets/charts.dart';
@@ -110,7 +111,7 @@ class _MyExpenseHomePageState extends State<MyExpenseHomePage> {
   @override
   Widget build(BuildContext context) {
     final appBar = AppBar(
-      title: Text('Personal Expense'),
+      title: Text('        Personal Expense'),
       actions: [
         IconButton(
             onPressed: () => {_startNewAddTransaction(context)},

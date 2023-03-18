@@ -1,3 +1,5 @@
+// ignore_for_file: unnecessary_import, implementation_imports, unused_import, prefer_const_constructors
+
 import 'package:flutter/material.dart';
 import 'package:flutter/src/widgets/framework.dart';
 import 'package:flutter/src/widgets/placeholder.dart';
@@ -47,7 +49,7 @@ class _InterestsState extends State<Interests> {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(15),
                           image: DecorationImage(
-                            image: AssetImage('assets/ex3.png'),
+                            image: AssetImage('assets/photography.jpeg'),
                           ),
                           // boxShadow: [
                           //   BoxShadow(
@@ -96,7 +98,7 @@ class _InterestsState extends State<Interests> {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(15),
                           image: DecorationImage(
-                            image: AssetImage('assets/ex4.png'),
+                            image: AssetImage('assets/staycation.jpeg'),
                           ),
                           // boxShadow: [
                           //   BoxShadow(
@@ -153,7 +155,8 @@ class _InterestsState extends State<Interests> {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(15),
                           image: DecorationImage(
-                              image: AssetImage('assets/ex2.png')),
+                              image: AssetImage('assets/blogger.jpeg'),
+                              fit: BoxFit.contain),
                           // boxShadow: [
                           //   BoxShadow(
                           //       offset: Offset(-5, -5),
@@ -201,7 +204,7 @@ class _InterestsState extends State<Interests> {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(15),
                           image: DecorationImage(
-                              image: AssetImage('assets/ex1.png')),
+                              image: AssetImage('assets/foodie.jpeg')),
                           // boxShadow: [
                           //   BoxShadow(
                           //       offset: Offset(5, 5),
@@ -257,7 +260,7 @@ class _InterestsState extends State<Interests> {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(15),
                           image: DecorationImage(
-                              image: AssetImage('assets/ex2.png')),
+                              image: AssetImage('assets/backpack.jpeg')),
                           // boxShadow: [
                           //   BoxShadow(
                           //       offset: Offset(-5, -5),
@@ -305,7 +308,7 @@ class _InterestsState extends State<Interests> {
                           color: Colors.white,
                           borderRadius: BorderRadius.circular(15),
                           image: DecorationImage(
-                              image: AssetImage('assets/ex1.png')),
+                              image: AssetImage('assets/adventure.jpeg')),
                           // boxShadow: [
                           //   BoxShadow(
                           //       offset: Offset(5, 5),

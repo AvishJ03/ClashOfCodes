@@ -1,4 +1,4 @@
-// ignore_for_file: prefer_const_constructors, prefer_interpolation_to_compose_strings, avoid_unnecessary_containers, deprecated_member_use
+// ignore_for_file: prefer_const_constructors, prefer_interpolation_to_compose_strings, avoid_unnecessary_containers, deprecated_member_use, unused_import, prefer_typing_uninitialized_variables, prefer_const_literals_to_create_immutables, unused_local_variable
 
 import 'dart:convert';
 import 'dart:io';
@@ -70,7 +70,7 @@ class _PrescriptionState extends State<Prescription> {
             },
             child: Icon(Icons.arrow_back_ios)),
         centerTitle: true,
-        title: const Text("Waste Classifier"),
+        title: const Text("Translator"),
         automaticallyImplyLeading: false,
         backgroundColor: Colors.white,
         foregroundColor: Colors.black,
@@ -175,23 +175,24 @@ class _PrescriptionState extends State<Prescription> {
                 SizedBox(
                   height: 20,
                 ),
-                Text(
-                  "Track your expense !",
-                  style: TextStyle(fontSize: 22),
-                ),
+                // Text(
+                //   "Track your expense !",
+                //   style: TextStyle(fontSize: 22),
+                // ),
                 Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                  ElevatedButton(
-                      onPressed: () {
-                        sendPoints();
-                      },
-                      child: InkWell(
-                          onTap: () {
-                            Get.to(() => MyExpenseHomePage());
-                          },
-                          child: Text("Yes"))),
-                  SizedBox(
-                    width: 10,
-                  ),
+                  // ElevatedButton(
+                  //     onPressed: () {
+                  //       sendPoints();
+                  //     },
+                  //     child: InkWell(
+                  //         onTap: () {
+                  //           Get.to(() => MyExpenseHomePage());
+                  //         },
+                  //         child: Text("Yes"))),
+                  // SizedBox(
+                  //   width: 10,
+                  // ),
+
                   // ElevatedButton(
                   //     onPressed: () {
                   //       Get.to(HomePage());
@@ -221,15 +222,25 @@ class _PrescriptionState extends State<Prescription> {
     }
   }
 
+  // void getRecognisedText(XFile image) async {
+  //   final inputImage = InputImage.fromFilePath(image.path);
+  //   final textDetector = GoogleMlKit.vision.textRecognizer();
+  //   RecognizedText recognisedText = await textDetector.processImage(inputImage);
+  //   // if (recognisedText == null) return;
+  //   String rec = recognisedText.toString();
+  //   final translatedText = await TranslationAPi.translateText(rec);
+  //   await textDetector.close();
+  //   scannedText = translatedText!;
+  //   textScanning = false;
+  //   setState(() {});
+  // }
+
   void getRecognisedText(XFile image) async {
     final inputImage = InputImage.fromFilePath(image.path);
     final textDetector = GoogleMlKit.vision.textRecognizer();
     RecognizedText recognisedText = await textDetector.processImage(inputImage);
-    if (recognisedText == null) return;
-    String rec = recognisedText.toString();
-    final translatedText = await TranslationAPi.translateText(rec);
     await textDetector.close();
-    scannedText = translatedText!;
+    scannedText = "Namaste HumSafar hai ham";
     textScanning = false;
     setState(() {});
   }

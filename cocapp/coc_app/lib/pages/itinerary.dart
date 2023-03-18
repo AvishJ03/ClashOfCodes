@@ -1,5 +1,6 @@
 // ignore_for_file: use_key_in_widget_constructors, prefer_const_constructors, prefer_const_literals_to_create_immutables
 
+import 'package:coc_app/pages/panoa.dart';
 import 'package:flutter/material.dart';
 
 import 'package:coc_app/widgets/locations_widget.dart';
@@ -25,7 +26,9 @@ class HomePageItinerary extends StatelessWidget {
                 Icons.location_pin,
                 color: Colors.black,
               ),
-              onPressed: () {},
+              onPressed: () {
+                Get.to(() => MyHomePanoa());
+              },
             ),
           ],
           leading: IconButton(

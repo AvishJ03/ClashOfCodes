@@ -1,5 +1,13 @@
 // ignore_for_file: use_key_in_widget_constructors, library_private_types_in_public_api, import_of_legacy_library_into_null_safe, prefer_const_literals_to_create_immutables, prefer_const_constructors, avoid_print, unused_import, prefer_interpolation_to_compose_strings, unnecessary_cast
 
+import 'package:coc_app/pages/expene.dart';
+import 'package:coc_app/pages/google_maps_page.dart';
+import 'package:coc_app/pages/itinerary.dart';
+import 'package:coc_app/pages/job_page.dart';
+import 'package:coc_app/pages/ocr.dart';
+import 'package:coc_app/pages/panoa.dart';
+import 'package:coc_app/pages/silver_bar_chart.dart';
+import 'package:coc_app/pages/travel_buddy.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
@@ -9,6 +17,7 @@ import 'package:coc_app/colors.dart' as color;
 
 import '../widgets/data.dart';
 import 'animated_drawer.dart';
+import 'interests.dart';
 
 class HomePage extends StatefulWidget {
   @override
@@ -104,17 +113,18 @@ class _HomePageState extends State<HomePage> {
                     return InkWell(
                       onTap: () {
                         Get.to(() => AnimatedDrawerPage());
-                        if (index == 1) {
-                          // Get.to(() => JobHomePage());
+                        if (index == 0) {
+                          Get.to(() => HomePageItinerary());
+                        } else if (index == 1) {
+                          Get.to(() => DoctorSoldier());
                         } else if (index == 2) {
-                          print("2");
-                          // Get.to(() => ChartPage());
+                          Get.to(() => JobHomePage());
                         } else if (index == 3) {
-                          // Get.to(() => Schemes());
+                          Get.to(() => Prescription());
                         } else if (index == 4) {
-                          // Get.to(() => MapScreen());
+                          Get.to(() => MapScreen());
                         } else if (index == 5) {
-                          // Get.to(() => AddFriends());
+                          Get.to(() => MyExpenseHomePage());
                         }
                         //
                         // else if (index == 6) {
@@ -256,7 +266,7 @@ class _HomePageState extends State<HomePage> {
                 color: Colors.white,
               ),
               onPressed: () {
-                // Get.to(() => RegistrationPage());
+                Get.to(() => MyHomePanoa());
               },
             ),
             IconButton(
@@ -265,7 +275,7 @@ class _HomePageState extends State<HomePage> {
                 color: Colors.white,
               ),
               onPressed: () {
-                // Get.to(() => ReportProfile());
+                Get.to(() => Interests());
               },
             ),
             IconButton(

@@ -87,7 +87,7 @@ class _AnimatedDrawerPageState extends State<AnimatedDrawerPage> {
                     // Get.to(() => EducationalVideo());
                   },
                   child: Text(
-                    "  Emergency",
+                    "  Compare",
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),
@@ -99,7 +99,7 @@ class _AnimatedDrawerPageState extends State<AnimatedDrawerPage> {
                     // Get.to(() => DoctorSoldier());
                   },
                   child: Text(
-                    "  Nearby Restaurants",
+                    "  3D View",
                     style: TextStyle(color: Colors.white, fontSize: 20),
                   ),
                 ),
